@@ -242,12 +242,56 @@ h1, h2, h3, h4, h5, h6 {
 --------------------------------------------------------------*/
 
 #myVideo {
+  /* position: relative; */
   position: relative;
   right: 0;
   bottom: 0;
+  object-fit: cover;
+  position: absolute;
   min-width: 100%;
   min-height: 100%;
+  
 }
+
+.responsive {
+  width: 100%;
+  height: 1000px;
+  /* max-width: 100%; */
+  filter: blur(10px);
+  -webkit-filter: blur(8px);
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+}
+.content-hero {
+  position: fixed;
+  bottom: 0;
+  /* background: rgba(0, 0, 0, 0.5); */
+  color: #f1f1f1;
+  /* width: 100%; */
+  /* padding: 20px; */
+}
+
+
+.bg-text  h1{
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  color: #f8d720;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  border-radius: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
+  padding: 20px;
+  text-align: center;
+}
+
 
 #hero {
   width: 100%;
@@ -1059,4 +1103,49 @@ section {
 }
 #footer .credits {
   font-size: 13px;
+}
+
+/* Scroll Down Icon */
+.scrolldown-wrapper {
+	left: 50%;
+	position: absolute;
+	text-align: center;
+	bottom: 0;
+	transform: translate(-50%, -50%);
+}
+  
+.scrolldown {
+	border: 5px solid #FFFFFF;
+	border-radius: 30px;
+	height: 60px;
+	margin: 0 auto 8px;
+	text-align: center;
+	width: 40px;
+}
+
+.scrolldown-p1,
+.scrolldown-p2 {
+	animation-duration: 1.5s;
+	animation-name: scrolldown;
+	animation-iteration-count: infinite;
+	fill: #FFFFFF;
+}
+  
+.scrolldown-p2 {
+	animation-delay: .75s;
+}
+
+@keyframes scrolldown {
+	0% {
+		opacity: 0;
+		transform: translate(0, -8px);
+	}
+	50% {
+		opacity: 1;
+		transform: translate(0, 0);
+	}
+	100% {
+		opacity: 0;
+		transform: translate(0, 8px);
+	}
 }
